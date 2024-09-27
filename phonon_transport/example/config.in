@@ -1,0 +1,27 @@
+[Data Input]
+data_path=
+hessian_name=hessian
+coord_name=coord.xyz
+
+[Calculation]
+n_l=5,1,2
+n_r=1,2,3
+M_L=Au
+M_C=Au
+gamma=-1.401986386
+E_D=20
+N=500
+in_plane=False
+kappa_int_lower_E=0
+kappa_int_upper_E=0
+T_min=0.1
+T_max=400
+kappa_grid_points=1000
+
+[Eigenchannel]
+eigenchannel=True
+every_nth=1 (for all, -1 for none)
+channel_max=3
+
+[Data Output]
+plot_g=False

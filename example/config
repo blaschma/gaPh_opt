@@ -1,0 +1,65 @@
+[Basics]
+genetic_algorithm_path=#path to source code
+xtb_path=#path to xtb module
+helper_files=#path to helper files
+archive_archive_path=#path to archive
+calculation_path=#path to calculation
+phonon_transport_programm=#path to phonon transport programm
+queuing= (SLURM, GE or None)
+
+[Genetic Algorithm]
+population_size=60
+generation_limit=10
+evaluation_methods_path=tournament
+n_blocks_max=5
+n_blocks_min=2
+insert_mutation_prob=0.5
+coupling_mutation_prob=0.5
+block_mutation_prob=0.5
+substituent_mutation_prob=0.5
+truncate_mutation_prob=0.5
+n_tournament_selection=10
+fitness_function="1+x"
+substituent=H,F,C,B
+substituent_prob=0.85,0.05,0.05,0.05
+substituent_cost=0,0.5,0.5,0.5
+force_symmetry=True
+n_elitism=4
+subs_penalty=True
+
+[Building Procedure]
+CC_bond_lengt=1.58
+conjugation_angle=0.45
+building_block_path=#path to building blocks
+generation_data_path=generation_data
+ang2Bohr=1.889725989
+har2Ev=27.211
+anchor=0
+
+[Cluster Calculations]
+partition=epyc
+cpus_per_task=8
+mem_per_cpu=16G
+omp_stacksize=12G
+max_time=05:30:00
+kill_time=5700
+relax_level=xtb
+relax_iterations=730
+
+
+[xtb Calculations]
+xtb_level=extreme
+gfn=1
+
+[Phonon Calculation]
+M_L=Au
+M_C=Au
+gamma=-4.0
+E_D=20
+N=2000
+in_plane=False
+T_min=0.1
+T_max=600
+kappa_grid_points=50
+extended_ana=T (T or F)
+

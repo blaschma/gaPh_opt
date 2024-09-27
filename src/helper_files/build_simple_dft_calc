@@ -1,0 +1,23 @@
+
+
+a coord
+*
+no
+*
+eht
+y
+0
+y
+ri 
+on
+*
+dft
+on
+func pbe
+grid 4
+*
+scf
+iter
+150
+
+*
